@@ -1,0 +1,28 @@
+data:
+  root_dir: /path/to/data/root/
+  img_size: 384
+  norm:
+    mean: 0.485 0.456 0.406
+    stdev: 0.229 0.224 0.225
+
+model:
+  name: 'vit_large_patch16_224_in21k'
+
+train:
+  batch: 512
+  epochs: 101
+  learning_rate: 0.01
+  logging: True
+  log_steps: 100    # if logging is True, this value should be positive integer
+
+valid:
+  do_valid: False
+  train_split: False    # Should train data be split to obtain validation data?
+  rate: 0.0 # if train_split is True, rate is float number between 0 and 1
+  seed: 42
+  steps: 0  # if whether is True, this value should be positive integer
+  batch: 512
+
+eval:
+  do_eval: True
+  batch: 512

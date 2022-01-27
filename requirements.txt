@@ -1,0 +1,5 @@
+PyYAML==6.0
+timm==0.5.4
+torch==1.8.1+cu101
+torchvision==0.9.1+cu101
+tqdm==4.62.3
